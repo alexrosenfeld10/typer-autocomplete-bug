@@ -32,4 +32,4 @@ Tab completion results in:
 typer ./main.py run --name start--exmpl
 ```
 
-![Screen recording](./typer_bug.gif)
+![Screen recording](./typer_autocomplete_bug.gif)
