@@ -33,3 +33,21 @@ typer ./main.py run --name start--exmpl
 ```
 
 ![Screen recording](./typer_autocomplete_bug.gif)
+
+# Version tab completion bug
+
+To view the version tab completion bug, follow the same steps above, but input:
+
+```shell
+typer ./main.py run --vers[TAB]
+```
+
+This will tab complete correctly to `--version`. When you type something thereafter, and then tab complete again, the bug will be reproduced.
+
+```shell
+typer ./main.py run --version [TAB]
+typer ./main.py run --version (eval):1: command not found: Awesome
+(eval):1: command not found: Awesome
+(eval):1: command not found: Awesome
+typer ./main.py
+```
